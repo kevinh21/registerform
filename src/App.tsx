@@ -4,8 +4,8 @@ import { useState } from "react";
 import { FormEvent } from "react";
 import { AccountForm } from "./AccountForm";
 import { AddressForm } from "./AddressForm";
-import { UseMultistepForm } from "./UseMultistepForm";
 import { UserForm } from "./UserForm";
+import { UseMultistepForm } from "./UseMultistepForm";
 
 type FormData = {
   firstName: string;
@@ -50,7 +50,7 @@ function App() {
     e.preventDefault();
     if (!isLastStep) return next();
     alert("Account created successfully");
-    // todo  -  navigate to orderform page or connect to sqlite or whatever
+    // todo  -  Navigate to Typescript app or connect to sqlite or whatever
   }
 
   return (
@@ -79,6 +79,7 @@ function App() {
             justifyContent: "flex-end",
           }}
         >
+          {/* Back & Next/Finish Buttons */}
           {!isFirstStep && (
             <button type="button" onClick={back}>
               Back
